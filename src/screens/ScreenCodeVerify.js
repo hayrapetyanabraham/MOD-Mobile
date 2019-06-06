@@ -112,7 +112,7 @@ export default class ScreenCodeVerify extends React.Component {
                         </View>
 
                     </View>
-                    <View style={{ height: '100%', flex: 4 }} >
+                    <View style={{ height: '100%',  justifyContent: 'flex-end', flex: 4 }} >
                         <Image source={require('./images/ic_girl_in_fall_fashi_on_5_sitting.png')}
                             resizeMode="contain" />
                     </View>
