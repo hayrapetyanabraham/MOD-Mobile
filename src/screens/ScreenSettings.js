@@ -8,7 +8,7 @@ export default class ScreenSettings extends React.Component {
         <View>
           <Button
            onPress={() => this.props.navigation.navigate('ScreenSendSMS')}
-            title="Screen N1"
+            title="Settings"
           />
         </View>
       </View>
