@@ -6,14 +6,35 @@ export default class ScreenOther extends React.Component {
     return (
 
       <ImageBackground source={require('./images/background_small_elements.png')} style={styles.container}>
-        <View style={styles.bottomView} >
-          <TouchableOpacity
-            style={styles.SubmitButtonStyle}
-            activeOpacity={.5}
-            onPress={this.ButtonClickCheckFunction}>
-            <Text style={styles.TextStyle}> այո </Text>
-          </TouchableOpacity>
+
+        <View style={{ flex: 1 }}>
+
+          <View style={{
+            flex: 0.3, textAlignVertical: 'center',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}>
+            <TouchableOpacity
+              style={styles.SubmitButtonStyle}
+              activeOpacity={.5}
+              onPress={this.ButtonClickCheckFunction}>
+              <Text style={styles.TextStyle}> այո </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={{ flex: 0.5, alignItems: 'center' }} >
+
+          </View>
+
+          <View style={{ flex: 0.2, alignItems: 'center' }} >
+
+          </View>
+
         </View>
+
+
+
+
       </ImageBackground>
 
 
@@ -39,12 +60,20 @@ const styles = StyleSheet.create({
   },
   SubmitButtonStyle: {
     height: 42,
-    width: 160,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: '#5c2684',
-    borderRadius: 30,
-    borderColor: '#fff'
+    width: '95%',
+    borderWidth: 0.4,
+    textAlignVertical: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '#5c2684',
+    backgroundColor: '#ffffff'
+    /*     height: 42,
+        width: 160,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: '#5c2684',
+        borderRadius: 30,
+        borderColor: '#fff' */
   },
 
   TextStyle: {
