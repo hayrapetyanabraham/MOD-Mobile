@@ -37,6 +37,9 @@ export default class MyTextInput extends React.Component {
         keyboardType={'phone-pad'}
         onFocus={this.handleFocus}
         onBlur={this.handleBlur}
+        value={this.props.value}
+        editable={this.props.editable}
+        onChangeText={this.props.onChangeText}
         style={styles.textInput}
       />
     );

@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Image, Text, TextInput, AppRegistry, TouchableOpacity, Alert, View, ImageBackground, Dimensions, ScrollView } from 'react-native';
+import { Platform, StyleSheet, Image, Text, ToastAndroid, TextInput, AppRegistry, TouchableOpacity, Alert, View, ImageBackground, Dimensions, ScrollView } from 'react-native';
 import CustomTextInput from "../components/MyTextInput";
 
 export default class ScreenSendSMS extends React.Component {
+
+  state = { number: "" };
+
   ButtonClickCheckFunction = () => {
-    this.props.navigation.navigate('ScreenCodeVerify')
+    // this.props.navigation.navigate('ScreenCodeVerify')
+    {
+      ToastAndroid.show(this.state.number, ToastAndroid.SHORT);
+    }
+
   }
   render() {
     return (
 
       <ImageBackground source={require('./images/background_small_elements.png')} style={styles.container}>
         <View style={{ flex: 1 }}>
-        
+
           <View style={{ flex: 0.35 }}>
           </View>
           <View style={{ flex: 0.15, alignItems: 'center' }} >
-            <CustomTextInput />
+            <CustomTextInput
+              value={this.state.number}
+              onChangeText={number => this.setState({ number })}
+            />
           </View>
           <View style={{ flex: 0.5, alignItems: 'center', justifyContent: "center" }} >
             <Image source={require('./images/model_In_overalls_1.png')}
